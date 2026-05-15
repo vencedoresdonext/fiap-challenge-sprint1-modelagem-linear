@@ -1,6 +1,6 @@
-# 📊 Análise de Consumo de Energia Residencial
+# Análise de Consumo de Energia Residencial
 
-## 📌 Descrição do Projeto
+## Descrição do Projeto
 
 Este projeto tem como objetivo analisar dados de consumo de energia residencial, com foco na identificação de padrões de uso e possíveis anomalias operacionais. A análise foi realizada utilizando Python e a biblioteca Pandas, com base em um conjunto de dados realista.
 
@@ -8,7 +8,7 @@ O estudo está alinhado com o contexto da empresa **GoodWe**, que atua no monito
 
 ---
 
-## 🧾 Dicionário de Dados
+## Dicionário de Dados
 
 O dataset contém as seguintes variáveis:
 
@@ -25,7 +25,7 @@ O dataset contém as seguintes variáveis:
 
 ---
 
-## ⚙️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - Python
 - Pandas
@@ -33,13 +33,13 @@ O dataset contém as seguintes variáveis:
 
 ---
 
-## 📊 Análise 1 — Variável Quantitativa Discreta  
+## Análise 1 — Variável Quantitativa Discreta  
 ### Household Size
 
-### ✔ Classificação
+### Classificação
 Variável quantitativa discreta, pois representa contagem de indivíduos.
 
-### 🔍 Insights
+### Insights
 
 **Distribuição:**
 - As frequências são aproximadamente iguais (~20% cada).
@@ -51,13 +51,13 @@ Variável quantitativa discreta, pois representa contagem de indivíduos.
 
 ---
 
-## 📊 Análise 2 — Variável Quantitativa Contínua  
+## Análise 2 — Variável Quantitativa Contínua  
 ### Energy Consumption (kWh)
 
-### ✔ Classificação
+### Classificação
 Variável quantitativa contínua, pois representa uma medição com valores decimais.
 
-### 🔍 Insights
+### Insights
 
 **Concentração:**
 - A maior parte dos dados está nas faixas mais baixas de consumo.
@@ -72,23 +72,23 @@ Variável quantitativa contínua, pois representa uma medição com valores deci
 
 ---
 
-## 💡 Aplicação para a Empresa (GoodWe)
+## Aplicação para a Empresa (GoodWe)
 
 Os resultados desta análise podem gerar valor para a GoodWe através de:
 
-- 📈 Monitoramento inteligente de consumo
-- ⚠️ Detecção automática de anomalias
-- 🔧 Geração de alertas de manutenção preventiva
-- 💰 Redução de custos energéticos para o usuário
-- ⚡ Otimização do uso de energia solar
+- Monitoramento inteligente de consumo
+- Detecção automática de anomalias
+- Geração de alertas de manutenção preventiva
+- Redução de custos energéticos para o usuário
+- Otimização do uso de energia solar
 
 Exemplo prático:
 > Um equipamento com consumo elevado e constante pode indicar falha, permitindo intervenção antecipada.
 
 ---
 
-## 📁 Estrutura do Projeto
-📂 projeto
+## Estrutura do Projeto
+projeto
 
 ├── smart_home_energy_consumption_large.csv
 
@@ -99,14 +99,14 @@ Exemplo prático:
 
 ---
 
-## ▶️ Como Executar
+## Como Executar
 
 1. Instale as dependências:
 ```bash
 pip install pandas plotly
 ```
 
-## 📌 Conclusão
+## Conclusão
 
 A análise permitiu identificar padrões relevantes no consumo energético residencial, destacando a predominância de baixo consumo e a existência de casos específicos de alto consumo que podem indicar anomalias.
 
