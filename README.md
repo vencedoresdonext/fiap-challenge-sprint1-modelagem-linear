@@ -27,9 +27,11 @@ O dataset contém as seguintes variáveis:
 
 ## Tecnologias Utilizadas
 
-- Python
-- Pandas
-- Plotly (para visualização)
+- **Python** (Linguagem base)
+- **Pandas** (Manipulação e limpeza de dados)
+- **Plotly / Matplotlib** (Visualização interativa e estática)
+- **SciPy** (Cálculos estatísticos e probabilidade)
+- **Scikit-Learn** (Modelagem preditiva e Regressão Linear)
 
 ---
 
@@ -59,55 +61,50 @@ Variável quantitativa contínua, pois representa uma medição com valores deci
 
 ### Insights
 
-**Concentração:**
-- A maior parte dos dados está nas faixas mais baixas de consumo.
-- Indica que a maioria dos aparelhos possui consumo reduzido.
+**Concentração e Probabilidade:**
+- A maior parte dos dados reais de mercado concentra-se nas faixas mais baixas de consumo, indicando que a maioria dos aparelhos possui consumo reduzido e eficiente.
+- A probabilidade dos eventos ocorrerem no intervalo da Média ± 2 Desvios Padrões foi validada matematicamente (~95,45%), o que enquadra o uso padrão na curva de distribuição normal.
 
 **Anomalias:**
 - Faixas de alto consumo possuem baixa frequência (~3%).
 - Podem indicar:
-  - uso intensivo
-  - ineficiência energética
-  - funcionamento contínuo de equipamentos
+  - Uso intensivo atípico
+  - Ineficiência energética (aparelhos antigos/defeituosos)
+  - Funcionamento contínuo ininterrupto de equipamentos (fugas de energia)
+
+---
+
+## Análise 3 — Modelagem Preditiva  
+### Temperatura Externa vs Consumo de Energia (Regressão Linear)
+
+### Objetivo
+Entender como a variação climática afeta o consumo elétrico residencial utilizando Machine Learning supervisionado.
+
+### Insights
+
+**Correlação Linear:**
+- O modelo identificou o coeficiente de inclinação entre a Temperatura Externa (X) e o Consumo (Y). 
+- Permitiu mapear a taxa exata de aumento de consumo em kWh a cada grau Celsius (°C) alterado no ambiente externo, filtrando cenários de alta correlação (como uso de ar-condicionado no verão) de cenários de ruído estatístico (distribuição uniforme).
 
 ---
 
 ## Aplicação para a Empresa (GoodWe)
 
-Os resultados desta análise podem gerar valor para a GoodWe através de:
+Os resultados desta análise podem gerar grande valor estratégico para a GoodWe através de:
 
-- Monitoramento inteligente de consumo
-- Detecção automática de anomalias
-- Geração de alertas de manutenção preventiva
-- Redução de custos energéticos para o usuário
-- Otimização do uso de energia solar
-
-Exemplo prático:
-> Um equipamento com consumo elevado e constante pode indicar falha, permitindo intervenção antecipada.
+- **Monitoramento inteligente:** Dashboards preditivos com base nos padrões estatísticos encontrados.
+- **Detecção automática de anomalias:** Identificação de picos de energia que fogem do intervalo Z-Score da média.
+- **Manutenção preventiva:** Geração de alertas quando um equipamento apresenta consumo elevado constante, permitindo intervenção antecipada antes de uma falha crítica.
+- **Otimização de ROI (Retorno sobre Investimento):** Otimização da distribuição de energia solar com base nas previsões climáticas da regressão linear.
 
 ---
 
 ## Estrutura do Projeto
-projeto
 
-├── smart_home_energy_consumption_large.csv
-
-├── analise.py
-
-├── README.md
-
-
----
-
-## Como Executar
-
-1. Instale as dependências:
-```bash
-pip install pandas plotly
-```
-
-## Conclusão
-
-A análise permitiu identificar padrões relevantes no consumo energético residencial, destacando a predominância de baixo consumo e a existência de casos específicos de alto consumo que podem indicar anomalias.
-
-Esses insights demonstram como a análise de dados pode ser aplicada para gerar valor estratégico, tanto para empresas quanto para consumidores.
+```text
+projeto/
+├── smart_home_energy_consumption_large.csv   # Dataset utilizado
+├── analise.py                                # Script de exploração e visualização
+├── challenge_sprint3.py                      # Script de Modelagem Linear e Probabilidade
+├── relatorio_estatistico.pdf                 # Interpretação dos resultados
+└── README.md                                 # Documentação do projeto
